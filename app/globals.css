@@ -155,3 +155,59 @@
   backdrop-filter: blur(12px);
   border: 1px solid rgba(191, 0, 255, 0.2);
 }
+
+/* Crack intro keyframes */
+@keyframes crackDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes loadDot {
+  0%, 80%, 100% {
+    transform: scale(0.4);
+    opacity: 0.3;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Pivot swing: cartoon painting hanging from a nail on right side.
+   Swings past 90° back and forth 2-3 times, then settles at 90°. */
+@keyframes pivotSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  18% {
+    transform: rotate(105deg);
+  }
+  36% {
+    transform: rotate(72deg);
+  }
+  52% {
+    transform: rotate(98deg);
+  }
+  68% {
+    transform: rotate(82deg);
+  }
+  82% {
+    transform: rotate(93deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+/* Drop: starts at 90° (settled), falls straight down */
+@keyframes pivotDrop {
+  0% {
+    transform: rotate(90deg) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg) translateY(120vh);
+    opacity: 0;
+  }
+}
