@@ -10,7 +10,6 @@ interface Shard {
   midY: number
   rotation: number
   delay: number
-  duration: number
   fallX: number
   fallY: number
   isCenter: boolean
@@ -97,7 +96,6 @@ function generateShards(): Shard[] {
         midY,
         rotation: (Math.random() - 0.5) * 30,
         delay,
-        duration: 0.8 + Math.random() * 0.4,
         fallX: Math.cos(angle) * fallDistance,
         fallY: Math.sin(angle) * fallDistance + 50,
         isCenter,
@@ -216,26 +214,27 @@ export function Intro({ onComplete }: { onComplete: () => void }) {
       )}
 
       {/* Outer shards - fall away from center */}
-      {outerShards.map((shard) => {
-        const isFalling = phase === "falling" || phase === "pivot" || phase === "drop"
-        return (
-          <div
-            key={shard.id}
-            className="absolute inset-0 z-20"
-            style={{
-              clipPath: shard.clipPath,
-              transform: isFalling
-                ? `translate3d(${shard.fallX}px, ${shard.fallY}px, 0) rotate(${shard.rotation}deg)`
-                : "translate3d(0, 0, 0) rotate(0deg)",
-              opacity: isFalling ? 0 : 1,
-              transition: `transform ${shard.duration}s cubic-bezier(0.32, 0, 0.67, 0) ${shard.delay}s, opacity 0.6s ease ${shard.delay + 0.3}s`,
-              willChange: "transform, opacity",
-            }}
-          >
-            <div className="w-full h-full bg-[#fafafa]" />
-          </div>
-        )
-      })}
+      {outerShards.map((shard) => (
+        <div
+          key={shard.id}
+          className="absolute inset-0 z-20"
+          style={{
+            clipPath: shard.clipPath,
+            transform:
+              phase === "falling" || phase === "pivot" || phase === "drop"
+                ? `translate(${shard.fallX}px, ${shard.fallY}px) rotate(${shard.rotation}deg)`
+                : "translate(0, 0) rotate(0deg)",
+            opacity:
+              phase === "falling" || phase === "pivot" || phase === "drop"
+                ? 0
+                : 1,
+            transition: `transform ${0.8 + Math.random() * 0.4}s cubic-bezier(0.55, 0.06, 0.68, 0.19) ${shard.delay}s, opacity 0.6s ease ${shard.delay + 0.3}s`,
+            willChange: "transform, opacity",
+          }}
+        >
+          <div className="w-full h-full bg-[#fafafa]" />
+        </div>
+      ))}
 
       {/* Center piece - composed of actual grid cells so edges align perfectly.
           Pivots like a loose picture frame, then drops. */}
@@ -245,9 +244,9 @@ export function Intro({ onComplete }: { onComplete: () => void }) {
           transformOrigin: `${pivot.x}% ${pivot.y}%`,
           animation: showCenterPiece
             ? phase === "drop"
-              ? "pivotDrop 0.9s cubic-bezier(0.55, 0, 0.85, 0.36) forwards"
+              ? "pivotDrop 0.9s cubic-bezier(0.6, 0, 1, 0.4) forwards"
               : phase === "pivot"
-                ? "pivotSwing 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards"
+                ? "pivotSwing 2.2s ease-in-out forwards"
                 : "none"
             : "none",
           willChange: "transform, opacity",
@@ -358,7 +357,7 @@ function CrackLines() {
           style={{
             strokeDasharray: 1000,
             strokeDashoffset: 1000,
-            animation: `crackDraw 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) ${line.delay}s forwards`,
+            animation: `crackDraw 0.4s ease-out ${line.delay}s forwards`,
           }}
         />
       ))}
