@@ -37,12 +37,12 @@ const projects = [
 ]
 
 const certifications = [
-  {
-    title: "AWS Certified AI Practitioner",
-    issuer: "Amazon Web Services",
-    date: "2026",
-    credentialUrl: "#",
-  },
+  // {
+  //   title: "AWS Certified AI Practitioner",
+  //   issuer: "Amazon Web Services",
+  //   date: "2026",
+  //   credentialUrl: "#",
+  // },
   {
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
