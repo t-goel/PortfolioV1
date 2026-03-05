@@ -184,7 +184,7 @@ export function Intro({ onComplete }: { onComplete: () => void }) {
     const allVerts = centerShards.flatMap((s) => s.vertices)
     const hull = convexHull(allVerts)
     // Expand hull slightly so text doesn't get clipped at edges
-    const expanded = expandPoly(hull, 0.5)
+    const expanded = expandPoly(hull, 1.5)
     return `polygon(${expanded.map((v) => `${v.x}% ${v.y}%`).join(", ")})`
   }, [centerShards])
 
@@ -267,7 +267,7 @@ export function Intro({ onComplete }: { onComplete: () => void }) {
           className="absolute inset-0 flex items-center justify-center"
           style={{ clipPath: centerClip }}
         >
-          <div className="flex flex-col items-center gap-1.5 sm:gap-3">
+          <div className="flex flex-col items-center gap-1.5 sm:gap-3 scale-75 sm:scale-100">
             <div className="flex gap-1 sm:gap-1.5">
               <span
                 className="block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#0a0a0a]"
