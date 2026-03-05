@@ -267,31 +267,31 @@ export function Intro({ onComplete }: { onComplete: () => void }) {
           className="absolute inset-0 flex items-center justify-center"
           style={{ clipPath: centerClip }}
         >
-          <div className="flex flex-col items-center gap-3">
-            <div className="flex gap-1.5">
+          <div className="flex flex-col items-center gap-1.5 sm:gap-3">
+            <div className="flex gap-1 sm:gap-1.5">
               <span
-                className="block w-2 h-2 rounded-full bg-[#0a0a0a]"
+                className="block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#0a0a0a]"
                 style={{
                   animation: "loadDot 1.4s ease-in-out infinite",
                   animationDelay: "0s",
                 }}
               />
               <span
-                className="block w-2 h-2 rounded-full bg-[#0a0a0a]"
+                className="block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#0a0a0a]"
                 style={{
                   animation: "loadDot 1.4s ease-in-out infinite",
                   animationDelay: "0.2s",
                 }}
               />
               <span
-                className="block w-2 h-2 rounded-full bg-[#0a0a0a]"
+                className="block w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#0a0a0a]"
                 style={{
                   animation: "loadDot 1.4s ease-in-out infinite",
                   animationDelay: "0.4s",
                 }}
               />
             </div>
-            <span className="text-sm font-mono tracking-[0.3em] uppercase text-[#0a0a0a]">
+            <span className="text-xs sm:text-sm font-mono tracking-[0.15em] sm:tracking-[0.3em] uppercase text-[#0a0a0a]">
               Loading
             </span>
           </div>
