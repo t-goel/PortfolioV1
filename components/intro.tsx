@@ -156,11 +156,11 @@ export function Intro({ onComplete }: { onComplete: () => void }) {
     setTimeout(() => setPhase("cracking"), 400)
     setTimeout(() => setPhase("falling"), 1200)
     setTimeout(() => setPhase("pivot"), 2400)
-    setTimeout(() => setPhase("drop"), 4200)
+    setTimeout(() => setPhase("drop"), 4800)
     setTimeout(() => {
       setPhase("done")
       onComplete()
-    }, 5200)
+    }, 5800)
   }, [onComplete])
 
   useEffect(() => {
@@ -246,7 +246,7 @@ export function Intro({ onComplete }: { onComplete: () => void }) {
             ? phase === "drop"
               ? "pivotDrop 0.9s cubic-bezier(0.6, 0, 1, 0.4) forwards"
               : phase === "pivot"
-                ? "pivotSwing 1.8s ease-in-out forwards"
+                ? "pivotSwing 2.2s ease-in-out forwards"
                 : "none"
             : "none",
           willChange: "transform, opacity",

@@ -174,40 +174,42 @@
   }
 }
 
-/* Pivot swing: cartoon painting hanging from a nail on right side.
-   Swings past 90° back and forth 2-3 times, then settles at 90°. */
+/* Pivot swing: cartoon painting hanging from nail at top-right corner.
+   Gravity pulls the shard to hang straight down (45° for a square cell).
+   Damped oscillations settle at 45°. */
 @keyframes pivotSwing {
   0% {
     transform: rotate(0deg);
   }
-  18% {
-    transform: rotate(105deg);
+  20% {
+    transform: rotate(-60deg);
   }
-  36% {
-    transform: rotate(72deg);
+  40% {
+    transform: rotate(-30deg);
   }
-  52% {
-    transform: rotate(98deg);
+  58% {
+    transform: rotate(-52deg);
   }
-  68% {
-    transform: rotate(82deg);
+  74% {
+    transform: rotate(-40deg);
   }
-  82% {
-    transform: rotate(93deg);
+  88% {
+    transform: rotate(-48deg);
   }
   100% {
-    transform: rotate(90deg);
+    transform: rotate(-45deg);
   }
 }
 
-/* Drop: starts at 90° (settled), falls straight down */
+/* Drop: starts at 45° (hanging straight down from pivot), falls straight down.
+   translateY is listed first so it operates in screen-space, not rotated space. */
 @keyframes pivotDrop {
   0% {
-    transform: rotate(90deg) translateY(0);
+    transform: translateY(0) rotate(-45deg);
     opacity: 1;
   }
   100% {
-    transform: rotate(90deg) translateY(120vh);
+    transform: translateY(120vh) rotate(-45deg);
     opacity: 0;
   }
 }
