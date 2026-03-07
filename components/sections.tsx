@@ -77,7 +77,7 @@ export function AboutSection() {
             About{" "}
             <span
               style={{
-                background: "linear-gradient(135deg, #bf00ff 0%, #ec4899 100%)",
+                background: "linear-gradient(135deg, #ad3535 0%, #d44545 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -122,7 +122,7 @@ export function ProjectsSection() {
           Featured{" "}
           <span
             style={{
-              background: "linear-gradient(135deg, #bf00ff 0%, #ec4899 100%)",
+              background: "linear-gradient(135deg, #ad3535 0%, #d44545 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -154,7 +154,7 @@ export function CertificationsSection() {
         >
           <span
             style={{
-              background: "linear-gradient(135deg, #bf00ff 0%, #ec4899 100%)",
+              background: "linear-gradient(135deg, #ad3535 0%, #d44545 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -187,7 +187,7 @@ export function ContactSection() {
             Get In{" "}
             <span
               style={{
-                background: "linear-gradient(135deg, #bf00ff 0%, #ec4899 100%)",
+                background: "linear-gradient(135deg, #ad3535 0%, #d44545 100%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -205,26 +205,26 @@ export function ContactSection() {
               href="https://github.com/t-goel"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-full bg-card border border-border hover:border-[#bf00ff] hover:glow-purple transition-all duration-300 group"
+              className="p-4 rounded-full bg-card border border-border hover:border-[#ad3535] hover:glow-purple transition-all duration-300 group"
               aria-label="GitHub"
             >
-              <Github size={28} className="text-muted-foreground group-hover:text-[#bf00ff] transition-colors" />
+              <Github size={28} className="text-muted-foreground group-hover:text-[#ad3535] transition-colors" />
             </a>
             <a
               href="https://www.linkedin.com/in/tim-goel/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-4 rounded-full bg-card border border-border hover:border-[#bf00ff] hover:glow-purple transition-all duration-300 group"
+              className="p-4 rounded-full bg-card border border-border hover:border-[#ad3535] hover:glow-purple transition-all duration-300 group"
               aria-label="LinkedIn"
             >
-              <Linkedin size={28} className="text-muted-foreground group-hover:text-[#bf00ff] transition-colors" />
+              <Linkedin size={28} className="text-muted-foreground group-hover:text-[#ad3535] transition-colors" />
             </a>
             <a
               href="mailto:timgoelny@gmail.com"
-              className="p-4 rounded-full bg-card border border-border hover:border-[#bf00ff] hover:glow-purple transition-all duration-300 group"
+              className="p-4 rounded-full bg-card border border-border hover:border-[#ad3535] hover:glow-purple transition-all duration-300 group"
               aria-label="Email"
             >
-              <Mail size={28} className="text-muted-foreground group-hover:text-[#bf00ff] transition-colors" />
+              <Mail size={28} className="text-muted-foreground group-hover:text-[#ad3535] transition-colors" />
             </a>
           </div>
         </motion.div>

@@ -36,7 +36,7 @@ export function Navbar() {
             href="#"
             className="font-mono text-xl font-bold text-glow"
             style={{
-              background: "linear-gradient(135deg, #bf00ff 0%, #ec4899 100%)",
+              background: "linear-gradient(135deg, #ad3535 0%, #d44545 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -54,7 +54,7 @@ export function Navbar() {
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#bf00ff] transition-all group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ad3535] transition-all group-hover:w-full" />
               </a>
             ))}
           </div>
@@ -82,7 +82,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-[#bf00ff]/10 transition-colors"
+                className="block px-4 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-[#ad3535]/10 transition-colors"
               >
                 {link.label}
               </a>

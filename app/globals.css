@@ -3,36 +3,36 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Cyberpunk purple theme */
+/* Crimson red theme */
 :root {
-  --background: oklch(0.08 0.02 280);
-  --foreground: oklch(0.95 0.01 280);
-  --card: oklch(0.12 0.02 280);
-  --card-foreground: oklch(0.95 0.01 280);
-  --popover: oklch(0.12 0.02 280);
-  --popover-foreground: oklch(0.95 0.01 280);
-  --primary: oklch(0.65 0.3 300);
+  --background: oklch(0.08 0.02 18);
+  --foreground: oklch(0.95 0.01 18);
+  --card: oklch(0.12 0.02 18);
+  --card-foreground: oklch(0.95 0.01 18);
+  --popover: oklch(0.12 0.02 18);
+  --popover-foreground: oklch(0.95 0.01 18);
+  --primary: oklch(0.47 0.15 27);
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.18 0.03 280);
-  --secondary-foreground: oklch(0.95 0.01 280);
-  --muted: oklch(0.18 0.03 280);
-  --muted-foreground: oklch(0.65 0.05 280);
-  --accent: oklch(0.7 0.25 320);
+  --secondary: oklch(0.18 0.03 18);
+  --secondary-foreground: oklch(0.95 0.01 18);
+  --muted: oklch(0.18 0.03 18);
+  --muted-foreground: oklch(0.65 0.03 18);
+  --accent: oklch(0.57 0.14 25);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.25 0.08 300);
-  --input: oklch(0.18 0.03 280);
-  --ring: oklch(0.65 0.3 300);
-  --chart-1: oklch(0.65 0.3 300);
-  --chart-2: oklch(0.7 0.25 320);
-  --chart-3: oklch(0.6 0.2 280);
-  --chart-4: oklch(0.75 0.2 340);
-  --chart-5: oklch(0.55 0.25 290);
+  --border: oklch(0.25 0.07 22);
+  --input: oklch(0.18 0.03 18);
+  --ring: oklch(0.47 0.15 27);
+  --chart-1: oklch(0.47 0.15 27);
+  --chart-2: oklch(0.57 0.14 25);
+  --chart-3: oklch(0.50 0.12 22);
+  --chart-4: oklch(0.62 0.12 30);
+  --chart-5: oklch(0.42 0.13 20);
   --radius: 0.625rem;
-  --neon-purple: #bf00ff;
-  --electric-violet: #8b5cf6;
-  --hot-pink: #ec4899;
+  --neon-purple: #ad3535;
+  --electric-violet: #d44545;
+  --hot-pink: #c96040;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -133,27 +133,27 @@
 
 /* Custom glow and grid effects */
 .glow-purple {
-  box-shadow: 0 0 20px rgba(191, 0, 255, 0.5), 0 0 40px rgba(191, 0, 255, 0.3);
+  box-shadow: 0 0 20px rgba(173, 53, 53, 0.5), 0 0 40px rgba(173, 53, 53, 0.3);
 }
 
 .glow-purple-sm {
-  box-shadow: 0 0 10px rgba(191, 0, 255, 0.4), 0 0 20px rgba(191, 0, 255, 0.2);
+  box-shadow: 0 0 10px rgba(173, 53, 53, 0.4), 0 0 20px rgba(173, 53, 53, 0.2);
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(191, 0, 255, 0.8), 0 0 40px rgba(191, 0, 255, 0.4);
+  text-shadow: 0 0 20px rgba(173, 53, 53, 0.8), 0 0 40px rgba(173, 53, 53, 0.4);
 }
 
 .grid-bg {
-  background-image: linear-gradient(rgba(191, 0, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(191, 0, 255, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(173, 53, 53, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(173, 53, 53, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .glassmorphism {
-  background: rgba(18, 18, 28, 0.8);
+  background: rgba(18, 12, 12, 0.8);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(191, 0, 255, 0.2);
+  border: 1px solid rgba(173, 53, 53, 0.2);
 }
 
 /* Crack intro keyframes */
