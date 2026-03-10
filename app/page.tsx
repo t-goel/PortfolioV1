@@ -19,8 +19,22 @@ export default function Home() {
     setReady(true)
   }, [])
 
+  // Lock scrolling during intro animation
+  useEffect(() => {
+    if (!introComplete) {
+      document.body.style.overflow = "hidden"
+      window.scrollTo(0, 0)
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [introComplete])
+
   const handleIntroComplete = useCallback(() => {
     sessionStorage.setItem("intro-played", "1")
+    window.scrollTo(0, 0)
     setIntroComplete(true)
   }, [])
 

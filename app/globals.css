@@ -131,6 +131,14 @@
   }
 }
 
+/* Hide scrollbar globally */
+html {
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
 /* Custom glow and grid effects */
 .glow-purple {
   box-shadow: 0 0 20px rgba(173, 53, 53, 0.5), 0 0 40px rgba(173, 53, 53, 0.3);
