@@ -15,11 +15,11 @@ const projects = [
     codeUrl: "https://github.com/t-goel/MacroAnalyzer",
   },
   {
-    title: "MarketDashboard",
-    description: "A financial analytics tool that visualizes historical stock trends with moving average overlays, aggregates real-time news, and utilizes linear regression models to forecast future price movements.",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Python", "FastAPI", "Scikit-learn", "Recharts", "yfinance"],
+    title: "Sylli AI - Syllabus-First RAG Study Platform",
+    description: "A serverless RAG platform with a syllabus-aware AI tutor. Engineered a parsing engine with AWS Bedrock to extract course timelines from PDFs and categorize materials, with an asynchronous embedding pipeline via S3 triggers powering a week-aware quiz generator and study assistant.",
+    techStack: ["AWS SAM", "Lambda", "Bedrock", "FastAPI", "Next.js", "DynamoDB", "S3"],
     demoUrl: "#",
-    codeUrl: "https://github.com/t-goel/MarketDashboard",
+    codeUrl: "#",
   },
   {
     title: "Reinforcement Learning Pac-Man",
@@ -88,18 +88,8 @@ export function AboutSection() {
           </h2>
           <div className="mt-8 p-8 glassmorphism rounded-2xl">
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Hi I'm Tanmay! I'm a passionate Software Developer with a deep interest in artificial intelligence and its applications
-              in economics. My journey in tech has been driven by curiosity and a constant desire to learn
-              and grow.
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed text-lg">
-              I specialize in building applications that leverage the power of AI to create intelligent,
-              responsive, and user-centric experiences. Recently, I've been exploring how natural language processing can used to derive macroeconomic insights.
-              
-            </p>
-            <p className="mt-4 text-muted-foreground leading-relaxed text-lg">
-              When I'm not coding, you'll find me doing something active, learning new skills, or 
-              playing board games with my friends.
+              I'm Tanmay, a software developer focused on building AI-powered applications — from serverless RAG pipelines and LLM-backed study tools to macroeconomic sentiment analysis platforms.
+              My work sits at the intersection of machine learning and full-stack engineering, with a recent focus on AWS-native architectures and production-ready AI systems.
             </p>
           </div>
         </motion.div>
